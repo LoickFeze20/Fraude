@@ -119,7 +119,7 @@ elif choice == "Prediction":
             montant_transaction = st.number_input("Montant Transaction (€)", min_value=0.0, step=50.0, value=0.0)
             anciennete_compte = st.number_input("Ancienneté du Compte (années)", min_value=0.0, step=0.5, value=0.0)
 
-        with open("modele.pkl", "rb") as f:
+        with open("model.pkl", "rb") as f:
             model = pickle.load(f)
 
         genre_e = 1 if genre.lower() == "male" else 0
@@ -154,7 +154,7 @@ elif choice == "Prediction":
         uploaded_fraude = st.file_uploader('Fraude csv',type=['csv'])  
         if uploaded_fraude:
             df = load_data(uploaded_fraude)
-            model_v = pickle.load(open('modele.pkl','rb'))
+            model_v = pickle.load(open('model.pkl','rb'))
             prediction = model_v.predict(df)
             st.subheader('Prediction de Fraude')
             #transforme du aré de stream en dataset et l'introduire dans le dataset fourni
