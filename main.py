@@ -312,7 +312,7 @@ if st.session_state['current_page'] == "Accueil":
         )
     with col_intro2:
         st.image("https://images.pexels.com/photos/730547/pexels-photo-730547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-                 caption="Protégez vos actifs avec l'IA", use_column_width=True)
+                 caption="Protégez vos actifs avec l'IA", use_container_width=True)
     st.markdown("---")
     st.write("Pour commencer, naviguez vers l'option **'Prédiction de Fraude'** ou explorez vos données dans le **'Dashboard Analytique'**.")
 
