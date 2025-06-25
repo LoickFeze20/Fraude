@@ -168,7 +168,7 @@ def toggle_theme():
     # Pas de st.rerun() explicite, le changement de session_state provoque déjà un rerun.
 
 # --- Bouton de Bascule de Thème (positionnement standard) ---
-theme_button_label = "☀️" if st.session_state['theme'] == 'dark' else "🌙"
+theme_button_label = "☀️ Pour le mode Claire" if st.session_state['theme'] == 'dark' else "🌙 Pour le mode Sombre"
 st.button(theme_button_label, on_click=toggle_theme, key="theme_toggle_button_actual")
 
 
